@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/login">
+
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/recuperar_senha">
+        <activity
+            android:id="@+id/recuperar_senha"
+            android:name="com.example.activity_login_pi.recuperar_senha"
+            android:label="activity_recuperar_senha"
+            tools:layout="@layout/activity_recuperar_senha" />
+        <action
+            android:id="@+id/action_global_navigation4"
+            app:destination="@id/navigation4" />
+    </navigation>
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/cadastro">
+        <activity
+            android:id="@+id/cadastro"
+            android:name="com.example.activity_login_pi.cadastro"
+            android:label="activity_cadastro"
+            tools:layout="@layout/activity_cadastro" />
+    </navigation>
+    <navigation android:id="@+id/navigation3"
+        app:startDestination="@id/login">
+        <activity
+            android:id="@+id/login"
+            android:name="com.example.activity_login_pi.Login"
+            android:label="activity_login2"
+            tools:layout="@layout/activity_login2" />
+        <action
+            android:id="@+id/action_global_navigation2"
+            app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_global_navigation"
+            app:destination="@id/navigation" />
+    </navigation>
+    <navigation android:id="@+id/navigation4"
+        app:startDestination="@id/confirmar_senha">
+        <activity
+            android:id="@+id/confirmar_senha"
+            android:name="com.example.activity_login_pi.confirmar_senha"
+            android:label="activity_confirmar_senha"
+            tools:layout="@layout/activity_confirmar_senha" />
+    </navigation>
+</navigation>
